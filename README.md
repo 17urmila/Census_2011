@@ -1,4 +1,3 @@
-# Census_2011
 # Project Title
 Census Data Standardization and Analysis Pipeline
 
@@ -15,6 +14,7 @@ Python, SQL, MongoDB, Streamlit
 ## Prblem Statement
 The task is to clean, process, and analyze census data from a given source. The goal is to ensure uniformity, accuracy, and accessibility of the census data for further analysis and visualization.
 
+## Steps followed 
 ### Script to read the csv file 
 
 import pandas as pd
@@ -37,19 +37,25 @@ replace and title function used to rename the State/UT names.
 
 ### Task 3 : New State/UT formation
 In 2014 Telangana was formed after it split from Andhra Pradesh.
+
 The State/UT name is changed from Andhra Pradesh to Telangana for the Districts that comes under Telangana State.
+
 In 2019 Ladakh was formed after it split from Jammu and Kashmir.
+
 The State/UT name is changed from Jammu and Kashmir to Ladakh for the Districts that comes under Ladakh. 
 
 ### Task 4 : Find and process Missing Data
 Missing data can be found by using isna()/isnull() and sum() function.
+
 Before filling missing data ,the percentage of missing data is calculated and stored in a dataframe called na_df for comparing. 
+
 Missing data can be filled by finding the correct data by using information from other cells.
 For example we can calculate the missing data of 'Population' column by adding the values of Columns named 'Male' and 'Female'.
-Data filling can be done by using fillna().
-##Code for comparing the amount of missing data before and after data cleaning for each column.
 
---Count of missing data before  data cleaning.
+Data filling done by using fillna().
+
+--Code for comparing the amount of missing data before and after data cleaning for each column.
+
 na_count=df.isna().sum()
 na_df=na_count.reset_index()
 na_df.columns = ['Columns','Missing_data_before_cleaning']
@@ -68,7 +74,7 @@ na_df
 
 !python -m pip install "pymongo[srv]"
 
-The processed data is saved to mongoDB with a collection named called 'Census'.
+The processed data is changed to a dictionary and  saved to mongoDB with a collection name called 'Census'.
 
 ### Task 6 : Database connection and data upload
 
