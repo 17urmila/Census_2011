@@ -1,12 +1,4 @@
-# Project Title
-Census Data Standardization and Analysis Pipeline
-
-## Colab notebook link
-https://colab.research.google.com/drive/1qXNh1aCcXbNJx2rzY0SY-WROwVWkCMOq#scrollTo=7iyHsjzRe7R2
-
-## Dataset URL
-
-https://docs.google.com/spreadsheets/d/1YWdOUGGFy1h-WKuXtkiKDTm3jcEY4Y7XuSZt_rzXtgc/edit?gid=1084285986#gid=1084285986
+# Project Title : Census Data Standardization and Analysis Pipeline
 
 ## Technologies used
 Python, SQL, MongoDB, Streamlit
